@@ -1,0 +1,929 @@
+o we making a 3d based website fpr showing our prototype of our ai prosthetic leg   features of our ai prosthetic leg -        ** Smart Sensor Technology
+- IMU Sensors: Monitor acceleration, orientation and angular movement.
+- Pressure Sensors: Measure foot-ground loading and weight distribution.
+- Joint Angle Sensors: Track knee and ankle positioning.
+- Socket Pressure Monitoring: Identifies unusual pressure distribution around the residual limb.
+- Temperature Monitoring: Tracks temperature around the socket.
+- Humidity Monitoring: Monitors the socket's internal environment.
+- Real-Time Motion Tracking: Continuously collects movement data.
+**. Smart Socket and Comfort Features
+- Intelligent Socket Monitoring: Monitors pressure distribution and comfort-related changes.
+- Pressure Imbalance Detection: Identifies unusual pressure concentrations.
+- Skin Environment Monitoring: Tracks temperature and humidity.
+- Personalised Fit Analysis: Records changes in socket pressure patterns.
+- Comfort Alerts: Notifies users when unusual conditions require attention.
+**. Modular and Cost-Effective Design
+- Replaceable Components: Individual damaged parts can be replaced without replacing the entire prosthesis.
+- Upgradeable Architecture: Allows future hardware and software improvements.
+- Standardised Connections: Simplifies compatible component replacement.
+- Replaceable Battery Module: Makes battery servicing easier.
+- Interchangeable Sensor Modules: Allows sensor upgrades.
+- Affordable Manufacturing Approach: Prioritises accessible materials and components.
+- Local Repairability: Designed for easier maintenance and servicing.                                    So the smart sensor technology, like the monitor acceleration, pressure sensors, joint angle sensor, socket pressure monitoring, temperature, humidity, and real-time motion. So what is the purpose of just, you know, tracking this and, you know, having data? Does it help it in any way, or just you're, like, making a no-brainer thing? Because remaining I get, like modular and cost-effective design is, like we have, like customizable parts, like if one thing breaks down, it's not that the whole prosthetic leg goes down. Just a few repair tweaks here and there, and modular and cost-effective design. And then smart socket and comfort features is, like we bring a better layer of comfort feature and smart, you know, for fit alerts and assistance, and then we also have an app. Also give me a UI/UX design layout and ideas for the app. But for the main, for what are we using the smart sensor technology? Like all of those, but for what purpose?
+You're asking exactly the right question. And honestly, this is where we need to make your project more than just a prosthetic with a bunch of sensors attached to it.
+
+Sensors are not the innovation by themselves. What the prosthesis DOES with the information collected by those sensors is the innovation.
+
+If your prosthetic only measures acceleration, pressure, temperature and movement, stores the readings and displays them in an app, then yes, it is essentially a monitoring device.
+
+But if it uses those readings to identify problems, understand the user's movement, provide useful assistance and improve the prosthesis's performance, then the sensors become genuinely valuable.
+
+Let's give every sensor a clear purpose.
+
+1. What is the actual purpose of smart sensor technology?
+Think of the sensors as the prosthesis's nervous system.
+
+A human nervous system continuously receives information about body position, movement, pressure and balance. Your prosthesis can use electronic sensors to collect some similar types of information.
+
+Life-changing prosthetics technology - GOV.UK
+The system should have four main responsibilities:
+
+Understand: What is the user doing?
+
+Detect: Is something unusual happening?
+
+Respond: Does the prosthesis need to change its behaviour?
+
+Inform: Does the user or prosthetist need to know something?
+
+Here's how I would use each sensor.
+
+A. IMU sensors (accelerometer + gyroscope)
+GY-BNO085 / BNO085-based high-precision IMU module, 9DOF, AHRS, gyroscope, accelerometer, magnetometer, 3.3V - HESTORE - Electronic component retail and wholesale
+Purpose: Understand movement and orientation.
+
+These sensors measure acceleration, angular velocity and orientation estimates.
+
+What can your prosthesis do with this information?
+
+Detect whether the user is walking, standing or sitting.
+
+Estimate walking speed and cadence.
+
+Recognise different phases of a walking cycle.
+
+Detect sudden movements or unusual changes in gait.
+
+Identify changes in the user's normal walking pattern.
+
+Help recognise potential stumbling events.
+
+Actual benefit: The prosthesis can understand how it is moving instead of simply behaving like a fixed mechanical structure.
+
+B. Foot pressure sensors
+FSR406 Pressure Sensor
+ – Electroslab
+Purpose: Understand how weight is distributed.
+
+These sensors measure the load applied to different regions of the prosthetic foot.
+
+What can your prosthesis do?
+
+Identify heel contact.
+
+Identify when weight shifts towards the forefoot.
+
+Estimate loading during different walking phases.
+
+Detect unusual weight distribution.
+
+Identify differences in loading patterns over time.
+
+Help estimate when the foot is bearing weight.
+
+Actual benefit: It can help the system recognise where the user is in their walking cycle and provide information that could be used by an adaptive controller.
+
+For example, pressure changes at the heel and toe can help distinguish between initial contact, mid-stance and toe-off.
+
+C. Joint-angle sensors
+AS5600 Magnetic Encoder Induction Angle Sensor
+Purpose: Understand joint positioning.
+
+These sensors measure the angle of a prosthetic knee or ankle.
+
+What can your prosthesis do?
+
+Monitor joint movement.
+
+Recognise bending and extension.
+
+Track the range of motion.
+
+Identify unusual joint movement.
+
+Compare actual movement with expected movement.
+
+Provide joint-position information to an adaptive controller.
+
+Actual benefit: The prosthesis can monitor whether its joint is moving as intended.
+
+For example, if the joint isn't reaching its expected position during a movement, the system could record the abnormality and flag it for inspection.
+
+D. Socket pressure sensors
+Monitoring the Residual Limb-Socket Interface: A Perspective on Clinical Needs and Challenges | Biomedical Materials & Devices | Springer Nature Link
+Purpose: Monitor the interaction between the residual limb and prosthetic socket.
+
+These sensors measure pressure at selected points inside the socket.
+
+What can your prosthesis do?
+
+Monitor pressure distribution.
+
+Identify unusually concentrated pressure.
+
+Detect changes in pressure patterns.
+
+Compare pressure patterns across different activities.
+
+Notify the user when a fit assessment may be needed.
+
+Actual benefit: It helps identify possible socket-fitting problems before they become more troublesome.
+
+This is particularly valuable because a prosthesis can function mechanically while still causing discomfort.
+
+E. Temperature sensors
+Gravity: DS18B20 Temperature Sensor - temperature sensor for Arduino - Kamami on-line store
+Purpose: Monitor the socket's thermal environment.
+
+What can your prosthesis do?
+
+Monitor temperature inside the socket.
+
+Identify unusual temperature increases.
+
+Track temperature changes during extended usage.
+
+Provide alerts when temperature readings exceed individually established limits.
+
+Actual benefit: Helps users and clinicians understand changes in the socket environment that could contribute to discomfort.
+
+F. Humidity sensors
+Buy SI7021 Humidity and Temperature Sensor Module - DNA Solutions
+Purpose: Monitor moisture and humidity inside the socket.
+
+What can your prosthesis do?
+
+Monitor moisture accumulation.
+
+Identify prolonged high-humidity conditions.
+
+Track changes throughout the day.
+
+Notify users when the socket environment may need attention.
+
+Actual benefit: Helps manage moisture-related discomfort and gives users information about their socket environment.
+
+G. Real-time motion tracking
+This isn't necessarily another physical sensor. It's a system that combines information from the IMU, pressure sensors and joint-angle sensors.
+
+Purpose: Build a complete picture of the prosthesis's movement.
+
+Track walking cycles.
+
+Estimate stride timing.
+
+Monitor cadence and movement consistency.
+
+Record walking activity.
+
+Compare current movement against the user's baseline.
+
+Supply data to the AI gait-analysis system.
+
+Actual benefit: Instead of looking at isolated sensor readings, the system can understand the overall movement pattern.
+
+2. Now the important part: What does AI do with all this data?
+This is where I would introduce an actual intelligence layer into your project.
+
+Rather than displaying seven different sensor readings, combine them to create meaningful features.
+
+Smart Prosthetic Intelligence Engine
+Sensor inputs
+
+IMU + foot pressure + joint angle + socket sensors
+AI and data-processing engine
+
+Gait recognition · Pressure analysis · Movement analysis · Anomaly detection
+Understand
+
+Recognise the user's movement.
+Detect
+
+Identify unusual patterns.
+Respond
+
+Adjust approved mechanical settings.
+Inform
+
+Provide useful feedback to the user.
+Here are four actual applications I would develop:
+
+1. Personalised gait intelligence
+The system learns the user's normal walking pattern.
+
+For example:
+
+The user's normal walking cadence is established.
+
+The system records stride timing and movement.
+
+It recognises when walking speed changes.
+
+It identifies deviations from the user's baseline.
+
+It provides information to the adaptive controller.
+
+This can eventually help personalise mechanical assistance rather than relying on identical settings for every user.
+
+2. Intelligent pressure management
+Combine socket pressure, temperature and humidity readings.
+
+For example:
+
+A user has been wearing the prosthesis for several hours. The system identifies an increasing pressure concentration and elevated humidity.
+
+Instead of simply displaying numbers, the application provides a message:
+
+Socket condition alert
+
+Unusual pressure concentration detected around one monitored socket region.
+
+Review socket fit and comfort.
+
+Consider taking a break and inspecting the residual limb.
+
+Consult your prosthetist if discomfort persists.
+
+This is much more useful than showing a pressure value without context.
+
+3. Intelligent mechanical diagnostics
+Combine joint-angle readings, IMU data and actuator feedback (if your design includes an actuator).
+
+The system can:
+
+Identify unusual joint movement.
+
+Detect unexpected actuator behaviour.
+
+Compare mechanical response with expected behaviour.
+
+Flag potential maintenance requirements.
+
+This is particularly useful for your modular design because the system could help identify which component needs inspection.
+
+4. Adaptive movement assistance
+This is the feature that could make your prosthesis significantly more advanced.
+
+The sensors identify what the user is doing, and a safety-verified controller can adjust a variable-resistance mechanism accordingly.
+
+For example:
+
+Detected activity
+
+Possible mechanical response
+
+Walking
+
+Normal movement settings
+
+Faster walking
+
+Adjusted resistance settings
+
+Standing
+
+Appropriate stable support
+
+Uneven terrain
+
+Controlled movement response
+
+Stair transition
+
+Preconfigured, validated joint response
+
+This requires a suitable mechanical actuator or adjustable-resistance mechanism. Sensors alone cannot physically change the movement of the leg.
+
+My recommendation: Make personalised gait intelligence and smart socket monitoring your two primary smart systems. Treat mechanical adaptation as the next development stage.
+
+3. Your mobile application: UI/UX design
+Now, I would not make your application look like a basic fitness tracker.
+
+It should look like a professional medical-device companion application, with a modern dashboard, clear visualisations and easy navigation.
+
+I would suggest naming it LIMBOS or NEXLIMB.
+
+For now, let's use NEXLIMB.
+
+NEXLIMB
+Smart Prosthetic Companion Application
+
+INNERSCAN — Smart Prosthesis Monitoring App :: Behance
+Medical device tracking. Medical Dashboard. Health stats by Equal on Dribbble
+Sano Sole - Smart Insole for Diabetic Foot Detection
+Screen 1 — Main dashboard
+This should be the first screen the user sees when opening the app.
+
+NEXLIMB
+Good evening!
+Prosthesis status
+
+Connected
+All PNG Images & PSDs Available for Download | PixelSquid
+Smart Prosthetic
+
+All monitored systems online
+
+Last synchronised: Just now
+4,280
+Steps today
+82%
+Gait consistency*
+86%
+Battery
+Normal
+System diagnostics
+*Illustrative UI values, not validated measurements or clinical scores.
+Today's activity
+
+Daily step goal
+4,280 / 6,000
+Home
+Gait
+Comfort
+Settings
+The dashboard should immediately answer four questions:
+
+Is my prosthesis connected?
+
+Is everything functioning normally?
+
+How much have I walked?
+
+Is there anything that needs my attention?
+
+Screen 2 — Gait intelligence
+This is where the AI becomes visible.
+
+BAL Inc (Baliston®)
+Include:
+
+Walking cadence.
+
+Estimated stride timing.
+
+Gait-phase visualisation.
+
+Movement consistency.
+
+Historical gait patterns.
+
+Changes compared with the user's personal baseline.
+
+An especially useful feature would be a weekly gait comparison.
+
+For example, the user could compare this week's walking pattern with the previous week and share the report with their prosthetist.
+
+Screen 3 — Smart comfort and socket monitoring
+INNERSCAN — Smart Prosthesis Monitoring App :: Behance
+This should be one of your most important screens.
+
+Include:
+
+Socket pressure distribution map.
+
+Temperature readings.
+
+Humidity readings.
+
+Unusual pressure alerts.
+
+Comfort-related history.
+
+Recommendations to inspect or review the socket.
+
+I would also add a colour-coded pressure map showing the different monitored socket regions.
+
+Avoid presenting a green area as medically safe or a red area as an injury. These should represent sensor readings relative to individually established monitoring ranges.
+
+Screen 4 — Live sensor monitoring
+JTrack — Real-Time Telemetry Mobile App by Tatevik Alexanyan on Dribbble
+This screen is particularly useful for your engineering demonstration.
+
+Show:
+
+Accelerometer X, Y and Z.
+
+Gyroscope readings.
+
+Foot pressure readings.
+
+Joint angle.
+
+Temperature.
+
+Humidity.
+
+Sensor connectivity.
+
+This is also where your teachers can see that the hardware is actually transmitting data.
+
+Screen 5 — Modular maintenance
+Industrial IoT mobile app for 3D-Printing Post-Processing by Maria Kornilova on Dribbble
+Show the individual components of the prosthesis and their maintenance status.
+
+For example:
+
+Component
+
+Display status
+
+IMU module
+
+Connected
+
+Pressure sensors
+
+Operational
+
+Battery module
+
+86%
+
+Socket sensor array
+
+Operational
+
+Joint module
+
+Inspection schedule available
+
+Additional functions:
+
+Component replacement history.
+
+Maintenance reminders.
+
+Battery health.
+
+Hardware identification.
+
+Troubleshooting instructions.
+
+Compatible upgrade information.
+
+4. Which features should you actually build first?
+I don't recommend implementing every sensor and AI function immediately. You'll spend too much time collecting data without having a working product.
+
+Here's my suggested implementation priority:
+
+Component
+
+First prototype
+
+Future development
+
+IMU
+
+Implement
+
+Advanced gait prediction
+
+Foot pressure
+
+Implement
+
+Advanced loading analysis
+
+Joint angle
+
+Implement
+
+Adaptive joint control
+
+Socket pressure
+
+Implement
+
+Personalised fit analysis
+
+Temperature
+
+Implement
+
+Intelligent alerts
+
+Humidity
+
+Implement
+
+Environmental trend analysis
+
+AI
+
+Basic gait classification
+
+Personalised adaptive control
+
+Mobile app
+
+Dashboard and monitoring
+
+Advanced analytics and clinician reports
+
+For the first version, I would use an ESP32 for sensor acquisition, a mobile application for visualisation, and Python for developing and testing the initial AI models.
+
+You should also prioritise sensor calibration and data quality. An inaccurate pressure reading is not useful simply because it appears on a beautiful dashboard.
+
+5. The biggest difference your project should demonstrate
+I want you to remember this distinction when presenting:
+
+A conventional prosthetic
+
+Mechanical functionality
+Provides the physical function of the missing limb.
+
+Your proposed smart prosthetic
+
+Intelligent functionality
+Understands movement.
+
+Monitors pressure and comfort.
+
+Identifies unusual patterns.
+
+Provides useful feedback.
+
+Supports mechanical adaptation.
+
+Enables easier maintenance and upgrades.
+
+My final recommendation is to position the project around three main pillars:
+
+Smart Intelligence: Sensors collect information and AI converts it into meaningful insights about movement and prosthesis performance.
+
+Smart Comfort: Socket monitoring helps identify unusual pressure and environmental conditions.
+
+Smart Modularity: Replaceable and upgradeable components make the system easier to maintain and potentially more affordable.
+
+The app connects all three.
+
+The key idea: Don't build a prosthetic that simply collects data. Build one where every sensor has a specific job, every reading leads to useful information, and every useful insight has the potential to improve the user's experience.
+
+That's what will make your project technically meaningful rather than just a normal prosthetic with electronics attached.   # PROJECT: NEXLIMB — HERO SECTION (PANEL 01)
+
+## ROLE
+
+Act as a world-class creative developer, 3D web engineer, product designer, UI/UX specialist and Three.js / React Three Fiber expert.
+
+Build the first section of a premium, highly interactive website showcasing NEXLIMB, an AI-enabled smart prosthetic leg.
+
+This is NOT a conventional landing page. It must feel like an advanced medical technology product presentation combined with a premium 3D engineering showcase.
+
+The primary objective is to make the prosthetic leg the absolute centre of attention.
+
+IMPORTANT: Build ONLY PANEL 01 — THE HERO EXPERIENCE. Do not build the comparison section, anatomy lab, modularity section or other website sections yet.
+
+---
+
+## 1. CORE VISUAL CONCEPT
+
+Create a full-screen, cinematic 3D product showcase.
+
+The attached reference image represents our proposed AI prosthetic leg.
+
+Use this image as the primary design reference. Preserve its overall appearance, proportions, materials, colour scheme, socket design, mechanical structure, ankle assembly and foot design.
+
+Do not replace it with a generic robotic leg.
+
+The prosthetic should look like a realistic, manufacturable engineering prototype rather than a cartoon, game asset or exaggerated science-fiction robot.
+
+### Visual identity
+
+- Primary background: deep graphite black.
+- Secondary surfaces: dark charcoal.
+- Accent colour: electric teal / cyan.
+- Mechanical materials: brushed titanium, aluminium and carbon fibre.
+- Lighting: premium cinematic studio lighting.
+- Typography: modern, minimal, sophisticated.
+- Overall aesthetic: futuristic medical technology and premium industrial engineering.
+
+Avoid excessive neon, glowing outlines, random decorative graphics and unnecessary text.
+
+---
+
+## 2. HERO LAYOUT
+
+Create a full-viewport hero section.
+
+### Navigation bar
+
+Top navigation:
+
+- NEXLIMB logo on the left.
+- Small label: INTELLIGENT PROSTHETIC SYSTEM.
+- Navigation links: Overview, Explore 3D, Technology.
+- A subtle full-screen interaction button.
+- Minimal transparent dark navigation styling.
+
+These links should navigate to relevant locations or interactions within this first panel only. Do not create unfinished links to future sections.
+
+### Main content
+
+Left side:
+
+Small introductory label:
+THE NEXT GENERATION OF PROSTHETICS
+
+Main heading:
+MORE THAN A REPLACEMENT.
+AN INTELLIGENT EXTENSION.
+
+Supporting text:
+An intelligent prosthetic concept designed around smart sensing, socket comfort monitoring and modular engineering.
+
+Buttons:
+- EXPLORE IN 3D
+- INSPECT TECHNOLOGY
+
+Below the buttons, display three concise feature indicators:
+
+01 — Smart Sensor Technology
+02 — Intelligent Comfort Monitoring
+03 — Modular Architecture
+
+Right side:
+
+Display the actual 3D prosthetic leg as the main visual element.
+
+The model should occupy approximately 55–65% of the available visual space.
+
+It must be large, detailed and visually dominant.
+
+Do not use a flat image as a substitute for the interactive 3D model.
+
+---
+
+## 3. REAL-TIME 3D MODEL — HIGHEST PRIORITY
+
+Use Three.js with React Three Fiber and Drei.
+
+Load the supplied GLB/GLTF model when available.
+
+If the reference image is supplied but a 3D model is not, prepare a realistic 3D asset workflow. Use a properly modelled multi-component prototype or a generated 3D asset as a temporary placeholder. Do not pretend a flat image is a genuine interactive 3D model.
+
+The 3D model must support:
+
+- Full 360-degree rotation.
+- Mouse drag rotation.
+- Scroll-wheel zoom.
+- Touch rotation on mobile.
+- Smooth camera controls.
+- Front view.
+- Side view.
+- Rear view.
+- Three-quarter view.
+- Reset camera.
+- Smooth camera transitions.
+
+The prosthetic must remain properly framed and never disappear outside the viewport.
+
+Use realistic metallic reflections, soft shadows, ambient occlusion and appropriate material properties.
+
+Create a dark studio environment with controlled rim lighting.
+
+The prosthetic should appear as a premium physical product photographed in a futuristic engineering studio.
+
+---
+
+## 4. INTERACTIVE 3D CONTROLS
+
+Create a floating control panel near the 3D model.
+
+Include:
+
+A. CAMERA CONTROLS
+- Rotate
+- Zoom in
+- Zoom out
+- Reset view
+
+B. VIEW MODES
+- Front
+- Side
+- Rear
+- 3/4
+
+C. VISUAL MODES
+- Standard view
+- X-ray view
+- Sensor highlight mode
+
+X-ray mode should visually reveal internal components by changing the opacity of appropriate exterior surfaces. Do not simply apply a random glowing effect.
+
+Sensor highlight mode should illuminate actual sensor locations with restrained teal indicators.
+
+All buttons must perform real actions.
+
+---
+
+## 5. INTERACTIVE SENSOR HOTSPOTS
+
+Add carefully positioned clickable hotspots on the prosthetic model.
+
+Required hotspots:
+
+1. IMU motion sensor.
+2. Foot pressure sensors.
+3. Socket pressure sensors.
+4. Temperature sensor.
+5. Humidity sensor.
+6. Joint-angle sensor, where applicable.
+7. Controller module.
+8. Replaceable battery module.
+
+When a visitor clicks a hotspot:
+
+- Smoothly move the camera towards the selected component.
+- Highlight the component.
+- Display a floating information panel.
+- Show its name.
+- Explain what it measures.
+- Explain why it is included.
+- Explain its practical benefit.
+
+Example:
+
+IMU MOTION SENSOR
+
+Function:
+Measures acceleration, angular velocity and orientation.
+
+Purpose:
+Helps the prosthesis understand movement patterns and gait phases.
+
+Benefit:
+Provides movement information for gait analysis and future adaptive control.
+
+Make the information panels elegant, compact and easy to close.
+
+Do not clutter the main 3D viewport with too many labels simultaneously.
+
+---
+
+## 6. MICRO-ANIMATIONS
+
+Introduce subtle, realistic animations:
+
+- Very slow automatic initial model rotation.
+- Smooth transition when selecting a camera view.
+- Gentle teal illumination when hovering over a sensor.
+- Smooth appearance of component information panels.
+- Subtle background lighting movement.
+- Small floating technical indicators.
+
+The animations must be smooth and purposeful.
+
+Avoid aggressive spinning, constant bouncing or distracting effects.
+
+The user must always retain control over the model.
+
+---
+
+## 7. BOTTOM INFORMATION STRIP
+
+At the bottom of the hero section, add a minimal technical information strip.
+
+Display:
+
+SMART SENSING
+Real-time movement and environmental monitoring.
+
+MODULAR DESIGN
+Replaceable and upgradeable components.
+
+SMART COMFORT
+Socket pressure and environmental monitoring.
+
+Each item should have a small icon and a concise description.
+
+---
+
+## 8. INTERACTION DESIGN REQUIREMENTS
+
+Interaction is the most important requirement.
+
+Implement:
+
+- Mouse-driven 3D rotation.
+- Touch-friendly mobile controls.
+- Interactive sensor hotspots.
+- Camera presets.
+- Smooth transitions.
+- X-ray mode.
+- Sensor highlight mode.
+- Reset interaction.
+- Responsive floating panels.
+- Keyboard-accessible controls where practical.
+
+Every visible button must work.
+
+No decorative controls that do nothing.
+
+Avoid unnecessary scroll-triggered animations that interfere with interaction.
+
+---
+
+## 9. TECHNICAL IMPLEMENTATION
+
+Preferred stack:
+
+- React
+- TypeScript
+- Three.js
+- React Three Fiber
+- Drei
+- Tailwind CSS
+- GSAP for selected transitions, if needed.
+
+Architecture:
+
+- Reusable 3D viewer component.
+- Separate camera-control component.
+- Separate sensor-hotspot component.
+- Separate component-information panel.
+- Centralised camera state.
+- Reusable visual-mode controls.
+
+Optimise 3D performance.
+
+Use efficient geometry, appropriate texture sizes and lazy loading where practical.
+
+Provide a loading screen while the 3D model loads.
+
+Provide a clear fallback if the model cannot load.
+
+Do not use an external image as the permanent replacement for the 3D experience.
+
+---
+
+## 10. RESPONSIVE DESIGN
+
+Desktop:
+- Large 3D model.
+- Split hero layout.
+- Full interactive controls.
+
+Tablet:
+- Balanced text and model layout.
+- Adapted floating panels.
+
+Mobile:
+- Stacked content.
+- Large interactive model.
+- Touch-based rotation.
+- Compact component panels.
+- No horizontal overflow.
+
+---
+
+## 11. STRICT DESIGN RULES
+
+DO:
+- Prioritise the 3D prosthetic.
+- Preserve the supplied reference design.
+- Use premium industrial design.
+- Create genuine interactions.
+- Use clean typography.
+- Make the interface feel polished.
+- Maintain visual consistency.
+- Use realistic component placement.
+
+DO NOT:
+- Generate a cartoon prosthetic.
+- Replace the model with a static image.
+- Create a generic AI dashboard.
+- Use random futuristic graphics.
+- Add fake AI claims.
+- Add unnecessary sections.
+- Build the comparison or anatomy sections yet.
+- Use buttons that do nothing.
+- Pretend simulated sensor readings are real hardware readings.
+
+---
+
+## 12. FINAL OBJECTIVE
+
+The final output must be a highly polished, functional and interactive hero experience.
+
+When someone opens the website, their immediate attention should go to the realistic 3D NEXLIMB prosthetic.
+
+They should be able to rotate it, zoom into it, switch camera views, reveal internal components and click sensor locations to understand their functions.
+
+The website should communicate that this is an engineered smart prosthetic concept, not just an ordinary prosthetic with a futuristic appearance.
+
+Build the actual working interface and application code, not just a visual mockup.
+
+Concentrate all development effort on this first hero panel.
+
+Make it visually exceptional, technically functional and presentation-ready.

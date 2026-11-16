@@ -1,0 +1,6 @@
+{
+  "name": "NEXLIMB — Intelligent Prosthetic System",
+  "description": "Interactive 3D engineering showcase for the NEXLIMB AI-enabled smart prosthetic leg featuring smart sensing, socket comfort monitoring, and modular architecture.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
